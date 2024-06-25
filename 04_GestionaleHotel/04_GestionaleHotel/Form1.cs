@@ -117,7 +117,7 @@ namespace _04_GestionaleHotel
             int availableX = panel1.Width;
 
             int sizeX = (availableX / daysInMonth) >= minCellSizeX ? (availableX / daysInMonth) : minCellSizeX;
-            int sizeY = (availableY / nCamere) - 2 >= minCellSizeY ? (availableY / nCamere) - 2 : minCellSizeY;
+            int sizeY = nCamere > 0 && ((availableY / nCamere) - 2 >= minCellSizeY) ? (availableY / nCamere) - 2 : minCellSizeY;
 
             for (int i = 1; i <= daysInMonth; i++)
             {
